@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/empresa.css">
+    <title> Cadastro e alteração de empresa</title>
+</head>
+<body>
+    <h1>Cadastro da empresa</h1>
+    <form id="form" name="form" enctype="multipart/form-data">
+        <input type="text" id="nome_fantasia" name="nome_fantasia" placeholder="Digite o nome fantasia..." required>
+        <input type="text" id="razao_social" name="razao_social" placeholder="Digite a razão social..." required>
+        <input type="text" id="cnpj" name="cnpj" placeholder="Digite o cnpj..." required>
+        <input type="text" id="ie" name="ie" placeholder="Digite o inscrição estadual..." required>
+        <input type="text" id="cep" name="cep" placeholder="Digite o CEP..." required>;
+        <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro..." required>
+        <input type="text" id="numero" name="numero" placeholder="Digite o número..." required>
+        <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro..." required>
+        <input type="text" id="cidade" name="cidade" placeholder="Digite o cidade..." required>
+        
+        <select>
+            <option value="RO">Rondônia</option>
+            <option value="SP">São Paulo</option>
+        </select>
+    </form>
+    <script src="js/empresa.js"></script>
+</body>
+
+</html>

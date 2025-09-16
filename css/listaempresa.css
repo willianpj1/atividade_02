@@ -1,0 +1,71 @@
+*{
+    font-family: 'open sans' sans-serif;
+}
+.btn{
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 55px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 5px;
+    
+}
+
+.btn-success{
+    background-color: rgba(124, 245, 4, 0.815);
+    box-shadow: 2px 2px 3px #e4b4b4;
+    font-weight: bold;
+}
+
+.btn-success:hover{
+    background-color: #9b1010;
+    box-shadow: 2px 2px 3px #323eee;
+    color: rgb(2, 255, 255);
+
+}
+
+.btn-warning{
+    background-color: blueviolet;
+    color: rgb(209, 255, 2);
+}
+
+.btn-warning:hover{
+    background-color: cadetblue;
+    color: antiquewhite;
+    box-shadow: #cf14b6;
+}
+
+.table {
+    border: 1px solid #2dabff;
+    border-collapse: collapse;
+    margin-top: 2%;
+    width: 95%;
+    position: center;
+    text-align: center;
+
+}
+.table th{
+    background-color: rgb(36, 72, 104);
+    color: rgb(16, 145, 145);
+    border-bottom: #2dabff;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+.table td{
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+.table tr:nth-child(even){
+    background-color: rgb(167, 167, 32);
+}
+
+.form-control{
+    border: 1px #cf14b6;
+    border-radius: 6px;
+    padding: 0.8%;
+    width: 75%;
+}

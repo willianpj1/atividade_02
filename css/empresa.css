@@ -1,0 +1,125 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do body */
+body {
+    font-family: 'Georgia', serif;
+    background: #2b3e3f; /* Cor escura e militar */
+    color: #f1f1f1; /* Texto claro para contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/World_War_1_battlefield_1917.jpg/640px-World_War_1_battlefield_1917.jpg'); /* Fundo com uma imagem de guerra */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Estilo do formulário */
+form {
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro para o formulário */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    border: 2px solid #6c4f31; /* Cor de borda em tom de marrom */
+}
+
+/* Título com estilo militar */
+h1 {
+    font-size: 36px;
+    color: #ffdd57; /* Um dourado para lembrar medalhas e botões */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Estilo dos inputs */
+input[type="text"], select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #6c4f31; /* Borda marrom escuro */
+    border-radius: 5px;
+    background: #4a4a48; /* Cor de fundo escura, parecendo uniforme militar */
+    font-size: 16px;
+    color: #f1f1f1; /* Texto claro */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"]:focus, select:focus {
+    outline: none;
+    border-color: #ffdd57; /* Borda dourada quando em foco */
+    box-shadow: 0 0 8px rgba(255, 221, 87, 0.8);
+}
+
+/* Estilo para os placeholders */
+input::placeholder {
+    color: #a5a5a5;
+    font-style: italic;
+}
+
+/* Efeito de hover para inputs */
+input[type="text"]:hover, select:hover {
+    background-color: #63615d; /* Fundo mais claro no hover */
+}
+
+/* Estilo para o botão (se existir) */
+button {
+    padding: 15px 30px;
+    background: #6c4f31;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #ffdd57;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Estilo para o select */
+select {
+    background: #4a4a48;
+    color: #f1f1f1;
+    font-size: 16px;
+}
+
+/* Efeito para bordas e sombreamento */
+form input[type="text"]:focus, form select:focus {
+    border-color: #ffdd57;
+    box-shadow: 0 0 10px rgba(255, 221, 87, 0.6);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    input[type="text"], select {
+        padding: 12px;
+    }
+}
