@@ -2,85 +2,49 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>Cadastro de Clientes</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f4f4f4;
-    }
-    h1 {
-      text-align: center;
-    }
-    form {
-      background: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-    }
-    .btn {
-      padding: 10px 15px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    .btn:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Cliente</title>
+  <link rel="stylesheet" href="css/cliente.css" />
 </head>
 <body>
 
-  <h1>Cadastro de Clientes</h1>
+  <h1 class="page-title">Cadastro de Cliente</h1>
 
-  <!-- Botão para ir para a listagem -->
-  <button onclick="window.location.href='listagem.html'" class="btn">📄 Ver Listagem</button>
+  <div class="button-group">
+    <a href="index.html" class="btn">Página Inicial</a>
+    <a href="menu.html" class="btn btn-secondary">Menu de Cadastros</a>
+  </div>
 
-  <form id="formCliente">
-    <input type="text" id="nome" placeholder="Nome" required />
-    <input type="email" id="email" placeholder="E-mail" required />
-    <input type="tel" id="telefone" placeholder="Telefone" required />
-    <button type="submit" class="btn">Cadastrar</button>
+  <form id="form">
+    <label for="cnpj">CNPJ:</label>
+    <input type="text" id="cnpj" name="cnpj" aria-describedby="feedback-cnpj" />
+    <div id="feedback-cnpj" aria-live="polite"></div>
+
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" name="cep" aria-describedby="feedback-cep" />
+    <div id="feedback-cep" aria-live="polite"></div>
+
+    <label for="razaoSocial">Razão Social:</label>
+    <input type="text" id="razaoSocial" name="razaoSocial" />
+
+    <label for="nomeFantasia">Nome Fantasia:</label>
+    <input type="text" id="nomeFantasia" name="nomeFantasia" />
+
+    <label for="logradouro">Logradouro:</label>
+    <input type="text" id="logradouro" name="logradouro" />
+
+    <label for="bairro">Bairro:</label>
+    <input type="text" id="bairro" name="bairro" />
+
+    <label for="municipio">Município:</label>
+    <input type="text" id="municipio" name="municipio" />
+
+    <label for="uf">UF:</label>
+    <input type="text" id="uf" name="uf" />
+
+    <button type="submit">Enviar</button>
   </form>
 
-  <script>
-    const form = document.getElementById("formCliente");
-
-    // Recupera clientes do localStorage
-    let clientes = JSON.parse(localStorage.getItem("clientes")) || [];
-    let proximoCodigo = clientes.length ? clientes[clientes.length - 1].codigo + 1 : 1;
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const nome = document.getElementById("nome").value;
-      const email = document.getElementById("email").value;
-      const telefone = document.getElementById("telefone").value;
-      const agora = new Date().toLocaleString();
-
-      const cliente = {
-        codigo: proximoCodigo++,
-        nome,
-        email,
-        telefone,
-        dataCriacao: agora,
-        dataAtualizacao: agora
-      };
-
-      clientes.push(cliente);
-      localStorage.setItem("clientes", JSON.stringify(clientes));
-      alert("Cliente cadastrado com sucesso!");
-
-      form.reset();
-    });
-  </script>
-
+  <script src="js/cliente.js"></script>
 </body>
 </html>

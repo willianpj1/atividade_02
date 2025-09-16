@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/empresa.css">
-    <title> Cadastro e alteração de empresa</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preenchimento Automático CNPJ e CEP</title>
+    <link rel="stylesheet" href="css/empresa.css" />
 </head>
+
 <body>
-    <h1>Cadastro da empresa</h1>
-    <form id="form" name="form" enctype="multipart/form-data">
-        <input type="text" id="nome_fantasia" name="nome_fantasia" placeholder="Digite o nome fantasia..." required>
-        <input type="text" id="razao_social" name="razao_social" placeholder="Digite a razão social..." required>
-        <input type="text" id="cnpj" name="cnpj" placeholder="Digite o cnpj..." required>
-        <input type="text" id="ie" name="ie" placeholder="Digite o inscrição estadual..." required>
-        <input type="text" id="cep" name="cep" placeholder="Digite o CEP..." required>;
-        <input type="text" id="logradouro" name="logradouro" placeholder="Digite o logradouro..." required>
-        <input type="text" id="numero" name="numero" placeholder="Digite o número..." required>
-        <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro..." required>
-        <input type="text" id="cidade" name="cidade" placeholder="Digite o cidade..." required>
-        
-        <select>
-            <option value="RO">Rondônia</option>
-            <option value="SP">São Paulo</option>
-        </select>
+    <h1 class="page-title">Cadastro de Empresa</h1>
+    
+    <div class="button-group">
+    <a href="index.html" class="btn">Página Inicial</a>
+    <a href="menu.html" class="btn btn-secondary">Menu de Cadastros</a>
+  </div>
+
+    <form id="form">
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" name="cnpj" aria-describedby="feedback-cnpj" />
+        <div id="feedback-cnpj" aria-live="polite"></div>
+
+        <br /><br />
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" aria-describedby="feedback-cep" />
+        <div id="feedback-cep" aria-live="polite"></div>
+
+        <br /><br />
+
+        <label for="razaoSocial">Razão Social:</label>
+        <input type="text" id="razaoSocial" name="razaoSocial" />
+
+        <br /><br />
+
+        <label for="nomeFantasia">Nome Fantasia:</label>
+        <input type="text" id="nomeFantasia" name="nomeFantasia" />
+
+        <br /><br />
+
+        <label for="logradouro">Logradouro:</label>
+        <input type="text" id="logradouro" name="logradouro" />
+
+        <br /><br />
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" />
+
+        <br /><br />
+
+        <label for="municipio">Município:</label>
+        <input type="text" id="municipio" name="municipio" />
+
+        <br /><br />
+
+        <label for="uf">UF:</label>
+        <input type="text" id="uf" name="uf" />
+
+        <br /><br />
+
+        <button type="submit">Enviar</button>
     </form>
+
     <script src="js/empresa.js"></script>
 </body>
 

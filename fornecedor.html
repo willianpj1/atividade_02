@@ -1,100 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Fornecedor</title>
-    <link rel="stylesheet" href="css/fornecedor.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Fornecedor</title>
+  <link rel="stylesheet" href="css/fornecedor.css" />
 </head>
-
 <body>
 
-    <div class="form-container">
-        <h1>Cadastro de Fornecedor</h1>
+  <h1 class="page-title">Cadastro de Fornecedor</h1>
 
-        <div class="input-container codico">
-            <input type="text" id="codico" name="codico" placeholder=" ">
-            <label for="codico">Código Fornecedor</label>
-        </div>
+  <div class="button-group">
+    <a href="index.html" class="btn">Página Inicial</a>
+    <a href="menu.html" class="btn btn-secondary">Menu de Cadastros</a>
+  </div>
 
-        <div class="input-container nome">
-            <input type="text" id="nome" name="nome" placeholder=" ">
-            <label for="nome">Nome Fornecedor</label>
-        </div>
+  <form id="form">
+    <label for="cnpj">CNPJ:</label>
+    <input type="text" id="cnpj" name="cnpj" aria-describedby="feedback-cnpj" />
+    <div id="feedback-cnpj" aria-live="polite"></div>
 
-        <div class="input-container email">
-            <input type="email" id="email" name="email" placeholder=" ">
-            <label for="email">Email</label>
-        </div>
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" name="cep" aria-describedby="feedback-cep" />
+    <div id="feedback-cep" aria-live="polite"></div>
 
-        <div class="input-container telefone">
-            <input type="tel" id="telefone" name="telefone" placeholder=" ">
-            <label for="telefone">Telefone</label>
-        </div>
+    <label for="razaoSocial">Razão Social:</label>
+    <input type="text" id="razaoSocial" name="razaoSocial" />
 
-        <div class="input-container data">
-            <input type="text" id="datacriacao" name="datacriacao" placeholder="">
-            <label for="datacriacao">Data de Criação</label>
-        </div>
+    <label for="nomeFantasia">Nome Fantasia:</label>
+    <input type="text" id="nomeFantasia" name="nomeFantasia" />
 
-        <div class="input-container data">
-            <input type="text" id="dataatuzlizacao" name="dataatuzlizacao" placeholder="">
-            <label for="dataatuzlizacao">Data de Atualização</label>
-        </div>
-        <!-- Botão Cadastrar -->
-        <!-- Botão Cadastrar -->
+    <label for="logradouro">Logradouro:</label>
+    <input type="text" id="logradouro" name="logradouro" />
 
-            
-        <div class="input-container cnpj">
-            <input type="text" id="cnpj" name="cnpj" placeholder=" ">
-            <label for="cnpj">CNPJ</label>
-        </div>
+    <label for="bairro">Bairro:</label>
+    <input type="text" id="bairro" name="bairro" />
 
-        <div class="input-container razao_social">
-            <input type="text" id="razao_social" name="razao_social" placeholder=" ">
-            <label for="razao_social">Razão Social</label>
-        </div>
+    <label for="municipio">Município:</label>
+    <input type="text" id="municipio" name="municipio" />
 
-        <div class="input-container nome_fantasia">
-            <input type="text" id="nome_fantasia" name="nome_fantasia" placeholder=" ">
-            <label for="nome_fantasia">Nome Fantasia</label>
-        </div>
+    <label for="uf">UF:</label>
+    <input type="text" id="uf" name="uf" />
 
-        <div class="input-container cep">
-            <input type="text" id="cep" name="cep" placeholder=" ">
-            <label for="cep">CEP</label>
-        </div>
-
-        <div class="input-container logradouro">
-            <input type="text" id="logradouro" name="logradouro" placeholder=" ">
-            <label for="logradouro">Logradouro</label>
-        </div>
-
-        <div class="input-container bairro">
-            <input type="text" id="bairro" name="bairro" placeholder=" ">
-            <label for="bairro">Bairro</label>
-        </div>
-
-        <div class="input-container cidade">
-            <input type="text" id="cidade" name="cidade" placeholder=" ">
-            <label for="cidade">Cidade</label>
-        </div>
-
-        <div class="input-container uf">
-            <input type="text" id="uf" name="uf" placeholder=" ">
-            <label for="uf">UF</label>
-        </div>
-
-        <script src="js/fornecedor.js"></script>
-        
-        <a href="" class="cadastrar">Salvar</a>
-
-        <!-- Botões Voltar e Lista -->
-        <div class="button-group">
-            <a href="index.html" class="button-voltar">Voltar</a>
-            <a href="listafornecedor.html" class="button-lista">Lista de Fornecedor</a>
-        </div>
-</body>
-
-</html>
+    <button type="submit">Enviar</button>
+    <script src="js/fornecedor.js"></script>
+  </form>

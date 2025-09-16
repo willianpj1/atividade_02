@@ -1,0 +1,95 @@
+.menu-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-list li {
+  text-align: center;
+}
+
+.btn-menu {
+  background-color: #28a745; /* verde */
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-menu:hover {
+  background-color: #1e7e34;
+}
+/* Estilo base do botão */
+.btn {
+  text-decoration: none;
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 24px;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(74,144,226,0.4);
+}
+
+.btn:hover {
+  background-color: #357abd;
+}
+
+/* Botão secundário */
+.btn-secondary {
+  background-color: #888;
+  box-shadow: 0 4px 8px rgba(136,136,136,0.4);
+}
+
+.btn-secondary:hover {
+  background-color: #555;
+}
+.menu-list {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+}
+
+.menu-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.menu-list li {
+  text-align: center;
+}
+
+.btn-menu {
+  background-color: #28a745; /* verde */
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  width: 100%; /* para preencher o max-width do ul */
+}
+
+.btn-menu:hover {
+  background-color: #1e7e34;
+}
